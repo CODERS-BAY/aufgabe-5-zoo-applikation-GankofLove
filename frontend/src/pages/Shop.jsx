@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-function Pfleger() {
+function Shop() {
     // Zustand für die Daten der Tabelle
-    const [data, setData] = useState([
-        { ID: '', Name: '', Gehege: '' }
-    ]);
+    const [data, setData] = useState({
+        Kinder: { Preis: '', ID: '' },
+        Erwachsene: { Preis: '', ID: '' },
+        Senioren: { Preis: '', ID: '' }
+    });
 
     // Datenbankabfrage hier // fetch??
     useEffect(() => {
-        // Beispiel: fetch('/api/pfleger').then(...)
+        // Beispiel: fetch('/api/tickets').then(...)
         // setData mit dem Ergebnis der Abfrage aktualisieren
     }, []);
 
@@ -41,18 +43,17 @@ function Pfleger() {
             <table style={tableStyle}>
                 <thead>
                 <tr>
-                    <th style={thStyle}>Tierpfleger</th>
+                    <th style={thStyle}>Tickets</th>
+                    <th style={thStyle}>Preis</th>
                     <th style={thStyle}>ID</th>
-                    <th style={thStyle}>Name</th>
-                    <th style={thStyle}>Gehege</th>
                 </tr>
                 </thead>
                 <tbody>
-                {data.map((pfleger, index) => (
-                    <tr key={index}>
-                        <td style={tdStyle}>{pfleger.ID}</td>
-                        <td style={tdStyle}>{pfleger.Name}</td>
-                        <td style={tdStyle}>{pfleger.Gehege}</td>
+                {Object.entries(data).map(([key, value]) => (
+                    <tr key={key}>
+                        <td style={tdStyle}>{key}</td>
+                        <td style={tdStyle}>{value.Preis}</td>
+                        <td style={tdStyle}>{value.ID}</td>
                     </tr>
                 ))}
                 </tbody>
@@ -61,4 +62,4 @@ function Pfleger() {
     );
 }
 
-export default Pfleger;
+export default Shop;

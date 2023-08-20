@@ -18,7 +18,7 @@ function Home() {
         backgroundColor: 'rgba(44, 44, 44, 0.7)', // Dunkelgraues Textfeld mit leichter Transparenz
         padding: '20px',  // Polsterung um den Text herum
         borderRadius: '10px' // Ecken des Textfelds abrunden
-    };
+    };  
 
     const textStyle = {
         color: 'lightgray',
