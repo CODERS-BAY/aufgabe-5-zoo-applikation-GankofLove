@@ -1,19 +1,23 @@
-﻿namespace ZooAPI.model;
-
-public class Animal : IComparable<Animal>
+﻿namespace ZooAPI.Model
 {
-    public int CompareTo(Animal? other)
+    // Tier-Modell
+    public class Tier
     {
-        throw new NotImplementedException();
-    }
+        // Konstruktor
+        public Tier(int id, string gattung, string nahrung, int gehegeId)
+        {
+            Id = id; // Tier-ID
+            Gattung = gattung; // Tiergattung (z.B. Löwe, Tiger)
+            Nahrung = nahrung; // Nahrung des Tiers
+            GehegeId = gehegeId; // ID des Geheges, in dem das Tier sich befindet
+        }
 
-    public override bool Equals(object? obj)
-    {
-        throw new NotImplementedException();
-    }
+        public string Gattung { get; set; }
 
-    public override string ToString()
-    {
-        throw new NotImplementedException();
+        public int GehegeId { get; set; }
+
+        public string Nahrung { get; set; }
+
+        public int Id { get; set; }
     }
 }
