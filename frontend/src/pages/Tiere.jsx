@@ -6,6 +6,7 @@ import haiImage from '../assets/hai.jpg';
 import tigerImage from '../assets/tiger.jpg';
 import bearImage from '../assets/bear.jpg';
 
+// Definiert den Zustand "activeAnimal" mithilfe des "useState" Hooks
 function Tiere() {
     const [activeAnimal, setActiveAnimal] = useState(null);
 
@@ -55,17 +56,22 @@ function Tiere() {
         }
     };
 
+    // Rückgabe des Komponenteninhalts
     return (
+        // Ein Container mit Padding und zentrierter Ausrichtung
         <div style={{ padding: '50px 0', textAlign: 'center' }}>
+            
+            
+            
             {/* Tiger */}
             <div
                 style={animalStyle}
-                onClick={() => setActiveAnimal(activeAnimal === 'Tiger' ? null : 'Tiger')}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'}
+                onClick={() => setActiveAnimal(activeAnimal === 'Tiger' ? null : 'Tiger')} // Klicken ändert den aktiven Tierzustand auf 'Tiger' oder auf null, wenn bereits aktiv
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'} // Hintergrundfarbe ändert sich beim Überfahren mit der Maus
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'} // Hintergrundfarbe ändert sich zurück, wenn Maus den Bereich verlässt
             >
-                <div style={textStyle}>Tiger</div>
-                <img src={tigerImage} alt="Tiger" style={imageStyle} />
+                <div style={textStyle}>Tiger</div> {/* Anzeige des Tiernamens */}
+                <img src={tigerImage} alt="Tiger" style={imageStyle} /> {/* Anzeige des Tierbildes */}
             </div>
 
             {/* Nilpferd */}
@@ -122,26 +128,26 @@ function Tiere() {
                 <div style={textStyle}>Insekten</div>
                 <img src={insectsImage} alt="Insekten" style={imageStyle} />
             </div>
-
             {activeAnimal === 'Tiger' && (
                 <table style={tableStyle}>
                     <thead>
                     <tr>
-                        <th style={thTdStyle}>ID</th>
-                        <th style={thTdStyle}>Name</th>
-                        <th style={thTdStyle}>Alter</th>
+                        <th style={thTdStyle}>ID</th> {/* Überschrift für die ID-Spalte */}
+                        <th style={thTdStyle}>Name</th> {/* Überschrift für die Name-Spalte */}
+                        <th style={thTdStyle}>Alter</th> {/* Überschrift für die Alter-Spalte */}
                     </tr>
                     </thead>
                     <tbody>
                     <tr style={trStyle}>
-                        <td style={thTdStyle}>1</td>
-                        <td style={thTdStyle}>Tiger 1</td>
-                        <td style={thTdStyle}>5</td>
+                        <td style={thTdStyle}>1</td> {/* Datenzeile für die ID */}
+                        <td style={thTdStyle}>Tiger 1</td> {/* Datenzeile für den Namen */}
+                        <td style={thTdStyle}>5</td> {/* Datenzeile für das Alter */}
                     </tr>
+                    {/* Weitere Zeilen können hinzugefügt werden */}
                     </tbody>
                 </table>
             )}
-
+            
             {activeAnimal === 'Nilpferd' && (
                 <table style={tableStyle}>
                     <thead>

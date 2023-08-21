@@ -47,9 +47,9 @@ function Shop() {
             <table style={tableStyle}>
                 <thead>
                 <tr>
-                    <th style={thStyle}>Tickets</th>
-                    <th style={thStyle}>Preis</th>
-                    <th style={thStyle}>ID</th>
+                    <th style={thStyle}>Tickets</th> {/* Überschrift für die Tickets-Spalte */}
+                    <th style={thStyle}>Preis</th> {/* Überschrift für die Preis-Spalte */}
+                    <th style={thStyle}>ID</th> {/* Überschrift für die ID-Spalte */}
                 </tr>
                 </thead>
                 <tbody>
@@ -57,9 +57,9 @@ function Shop() {
                     // Für jedes Ticket im "data"-Zustand wird eine Zeile in der Tabelle erzeugt.
                     Object.entries(data).map(([key, value]) => (
                         <tr key={key}>
-                            <td style={tdStyle}>{key}</td>
-                            <td style={tdStyle}>{value.Preis}</td>
-                            <td style={tdStyle}>{value.ID}</td>
+                            <td style={tdStyle}>{key}</td> {/* Datenzeile für den Ticketnamen */}
+                            <td style={tdStyle}>{value.Preis}</td> {/* Datenzeile für den Ticketpreis */}
+                            <td style={tdStyle}>{value.ID}</td> {/* Datenzeile für die Ticket-ID */}
                         </tr>
                     ))
                 }
