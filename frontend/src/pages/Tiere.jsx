@@ -7,7 +7,7 @@ import tigerImage from '../assets/tiger.jpg';
 import bearImage from '../assets/bear.jpg';
 
 function Tiere() {
-    const [showTable, setShowTable] = useState(false);
+    const [activeAnimal, setActiveAnimal] = useState(null);
 
     const animalStyle = {
         display: 'inline-block',
@@ -57,37 +57,73 @@ function Tiere() {
 
     return (
         <div style={{ padding: '50px 0', textAlign: 'center' }}>
+            {/* Tiger */}
             <div
                 style={animalStyle}
-                onClick={() => setShowTable(!showTable)}
+                onClick={() => setActiveAnimal(activeAnimal === 'Tiger' ? null : 'Tiger')}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'}
             >
                 <div style={textStyle}>Tiger</div>
                 <img src={tigerImage} alt="Tiger" style={imageStyle} />
             </div>
-            <div style={animalStyle}>
+
+            {/* Nilpferd */}
+            <div
+                style={animalStyle}
+                onClick={() => setActiveAnimal(activeAnimal === 'Nilpferd' ? null : 'Nilpferd')}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'}
+            >
                 <div style={textStyle}>Nilpferd</div>
                 <img src={hippoImage} alt="Nilpferd" style={imageStyle} />
             </div>
-            <div style={animalStyle}>
+
+            {/* Hai */}
+            <div
+                style={animalStyle}
+                onClick={() => setActiveAnimal(activeAnimal === 'Hai' ? null : 'Hai')}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'}
+            >
                 <div style={textStyle}>Haie</div>
                 <img src={haiImage} alt="Hai" style={imageStyle} />
             </div>
-            <div style={animalStyle}>
+
+            {/* Giraffe */}
+            <div
+                style={animalStyle}
+                onClick={() => setActiveAnimal(activeAnimal === 'Giraffe' ? null : 'Giraffe')}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'}
+            >
                 <div style={textStyle}>Giraffen</div>
                 <img src={giraffeImage} alt="Giraffe" style={imageStyle} />
             </div>
-            <div style={animalStyle}>
+
+            {/* Bär */}
+            <div
+                style={animalStyle}
+                onClick={() => setActiveAnimal(activeAnimal === 'Bär' ? null : 'Bär')}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'}
+            >
                 <div style={textStyle}>Bären</div>
                 <img src={bearImage} alt="Bär" style={imageStyle} />
             </div>
-            <div style={animalStyle}>
+
+            {/* Insekten */}
+            <div
+                style={animalStyle}
+                onClick={() => setActiveAnimal(activeAnimal === 'Insekten' ? null : 'Insekten')}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#b0b0b0'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'gray'}
+            >
                 <div style={textStyle}>Insekten</div>
                 <img src={insectsImage} alt="Insekten" style={imageStyle} />
             </div>
 
-            {showTable && (
+            {activeAnimal === 'Tiger' && (
                 <table style={tableStyle}>
                     <thead>
                     <tr>
@@ -99,13 +135,111 @@ function Tiere() {
                     <tbody>
                     <tr style={trStyle}>
                         <td style={thTdStyle}>1</td>
-                        <td style={thTdStyle}>Raoul</td>
+                        <td style={thTdStyle}>Tiger 1</td>
                         <td style={thTdStyle}>5</td>
                     </tr>
-                    {/* Weitere Zeilen können hinzugefügt werden */}
                     </tbody>
                 </table>
             )}
+
+            {activeAnimal === 'Nilpferd' && (
+                <table style={tableStyle}>
+                    <thead>
+                    <tr>
+                        <th style={thTdStyle}>ID</th>
+                        <th style={thTdStyle}>Name</th>
+                        <th style={thTdStyle}>Alter</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style={trStyle}>
+                        <td style={thTdStyle}>1</td>
+                        <td style={thTdStyle}>Nilpferd 1</td>
+                        <td style={thTdStyle}>8</td>
+                    </tr>
+                    </tbody>
+                </table>
+            )}
+
+            {activeAnimal === 'Hai' && (
+                <table style={tableStyle}>
+                    <thead>
+                    <tr>
+                        <th style={thTdStyle}>ID</th>
+                        <th style={thTdStyle}>Name</th>
+                        <th style={thTdStyle}>Alter</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style={trStyle}>
+                        <td style={thTdStyle}>1</td>
+                        <td style={thTdStyle}>Hai 1</td>
+                        <td style={thTdStyle}>12</td>
+                    </tr>
+                    </tbody>
+                </table>
+            )}
+
+            {activeAnimal === 'Giraffe' && (
+                <table style={tableStyle}>
+                    <thead>
+                    <tr>
+                        <th style={thTdStyle}>ID</th>
+                        <th style={thTdStyle}>Name</th>
+                        <th style={thTdStyle}>Alter</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style={trStyle}>
+                        <td style={thTdStyle}>1</td>
+                        <td style={thTdStyle}>Giraffe 1</td>
+                        <td style={thTdStyle}>7</td>
+                    </tr>
+                    </tbody>
+                </table>
+            )}
+
+            {activeAnimal === 'Bär' && (
+                <table style={tableStyle}>
+                    <thead>
+                    <tr>
+                        <th style={thTdStyle}>ID</th>
+                        <th style={thTdStyle}>Name</th>
+                        <th style={thTdStyle}>Alter</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style={trStyle}>
+                        <td style={thTdStyle}>1</td>
+                        <td style={thTdStyle}>Bär 1</td>
+                        <td style={thTdStyle}>10</td>
+                    </tr>
+                    </tbody>
+                </table>
+            )}
+
+            {activeAnimal === 'Insekten' && (
+                <table style={tableStyle}>
+                    <thead>
+                    <tr>
+                        <th style={thTdStyle}>ID</th>
+                        <th style={thTdStyle}>Name</th>
+                        <th style={thTdStyle}>Alter</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr style={trStyle}>
+                        <td style={thTdStyle}>1</td>
+                        <td style={thTdStyle}>Insekten 1</td>
+                        <td style={thTdStyle}>1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            )}
+
+
+
+            {/* Weitere Bedingungen und Tabellen für die anderen Tiere können hier folgen */}
         </div>
     );
 }

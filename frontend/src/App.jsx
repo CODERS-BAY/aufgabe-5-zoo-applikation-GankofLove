@@ -15,7 +15,7 @@ export default function App() {
         <Router>
             <div style={{ textAlign: 'center', backgroundColor: '#f0f0f0', minHeight: '100vh' }}>
                 <NavLink to="/" end style={{ textDecoration: 'none' }}>
-                    <h1 style={{ fontSize: '2em', fontFamily: 'Roboto, sans-serif', cursor: 'pointer', margin: '20px 0' }}>
+                    <h1 style={{ fontSize: '3em', fontFamily: 'Roboto, sans-serif', cursor: 'pointer', margin: '20px 0', color: '#009879', textTransform: 'uppercase', letterSpacing: '2px', fontWeight: 'bold' }}>
                         Zoo App
                     </h1>
                 </NavLink>
