@@ -3,7 +3,7 @@ const API_BASE_URL = 'http://localhost:5207/api';
 
 /**
  * Abrufen der Tickets von der API.
- * @returns {Array} Eine Liste von Tickets oder einen leeren Array im Fehlerfall.
+ * @returns {Array} Eine Liste von Tickets oder einen leeren Array im Fehlerfall
  */
 export const fetchTickets = async () => {
     try {
