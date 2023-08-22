@@ -11,8 +11,8 @@ Leider habe ich es nicht geschafft, das Frontend mit meiner Datenbank zu verbind
 war ich eifach nicht in der Lage dazu. Ich muss auch zugeben, dass das Projekt im großen und ganzen sehr schwer war.
 Ich habe mich stark überfordert gefühlt.
 
-In anbetracht vorgegebenen Zeit und dem Stand aus dem Unterricht (c# pratisch nicht gelernt // noch Enpoints in Java), sehe ich (+die Mehrheit der anderen Kursteilnehmer)
-das Projekt sehr kritisch. Auch wenn natürlich ein Lerneffekt stattgefunden hat, war es meiner Meinung nach (unter Bertrachtung der Umstände) zu schwer angesetzt.
+In anbetracht vorgegebenen Zeit und dem Stand aus dem Unterricht (c# pratisch nicht gelernt // noch Enpoints in Java), sehe ich (+ die Mehrheit der anderen Kursteilnehmer)
+das Projekt kritisch. Auch wenn natürlich ein Lerneffekt stattgefunden hat, war es meiner Meinung nach (unter Bertrachtung der Umstände) zu schwer angesetzt.
 
 Liebe Grüße <br>
 Jan Schneider
