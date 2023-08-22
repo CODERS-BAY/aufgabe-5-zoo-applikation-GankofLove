@@ -6,6 +6,7 @@ import haiImage from '../assets/hai.jpg';
 import tigerImage from '../assets/tiger.jpg';
 import bearImage from '../assets/bear.jpg';
 
+
 // Definiert den Zustand "activeAnimal" mithilfe des "useState" Hooks
 function Tiere() {
     const [activeAnimal, setActiveAnimal] = useState(null);
