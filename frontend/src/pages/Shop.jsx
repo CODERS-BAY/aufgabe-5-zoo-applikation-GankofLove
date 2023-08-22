@@ -65,6 +65,24 @@ function Shop() {
                 }
                 </tbody>
             </table>
+
+            {/* Hinzugefügte Kassierer-Tabelle */}
+            <table style={tableStyle}>
+                <thead>
+                <tr>
+                    <th style={thStyle}>Kassierer</th>
+                    <th style={thStyle}>Ticket ID</th>
+                    <th style={thStyle}>Verkaufsdatum</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style={tdStyle}>leer</td>
+                    <td style={tdStyle}>leer</td>
+                    <td style={tdStyle}>leer</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     );
 }
