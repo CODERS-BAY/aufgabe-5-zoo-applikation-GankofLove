@@ -14,7 +14,7 @@ Ich habe mich stark überfordert gefühlt. Meine Erfolge im Projekt sind teilwei
 In anbetracht der vorgegebenen Zeit und dem damals aktuellen Stand aus dem Unterricht (c# pratisch nicht gelernt // noch Enpoints in Java), sehe ich (+ die Mehrheit der anderen Kursteilnehmer)
 das Projekt kritisch. Auch wenn natürlich ein Lerneffekt stattgefunden hat, war es meiner Meinung nach (unter Bertrachtung der Umstände) zu schwer angesetzt.
 
-Somit ist mein Frontend eigentlich neur ein "Template" ohne Funktion. Ich habe mich bemüht, die Datenbankabfragen zu implementieren, aber leider ohne Erfolg
+Somit ist mein Frontend eigentlich neur ein "Template" ohne Funktion. Ich habe mich bemüht, die Datenbankabfragen zu implementieren, aber leider ohne Erfolg.
 
 Liebe Grüße <br>
 Jan Schneider
